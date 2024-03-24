@@ -1,0 +1,127 @@
+#listCommande {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#listCommande h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#listCommande h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+#listCommande img {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+#listCommande .disconnect-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+#listCommande .command-history {
+    display: flex;
+    flex-direction: column;
+}
+
+#listCommande .command-details {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FFF;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+#listCommande .command-details:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+#listCommande .command-details .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+#listCommande .buttons {
+    margin-top: 1em;
+}
+
+#listCommande .total-price {
+    font-size: 1.5rem;
+    color: #ff0000;
+    /* rouge */
+}
+
+#listCommande .quantity {
+    background-color: #ff0000;
+    /* rouge */
+    color: #ffffff;
+    /* blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#listCommande .remove-button {
+    background-color: #ff0000;
+    /* rouge */
+    color: #ffffff;
+    /* blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#listCommande .commander-button {
+    background-color: #ff0000;
+    /* rouge */
+    color: #ffffff;
+    /* blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#listCommande .commander-button:hover {
+    background-color: #cc0000;
+    /* rouge plus foncé */
+}
+
+.no-box-message {
+    background-color: #ffcccc;
+    /* rouge clair */
+    padding: 90px;
+    border-radius: 5px;
+}
+
+.no-box-message p {
+    color: #ff0000;
+    /* rouge */
+    font-size: 1.5rem;
+    font-weight: bold;
+}

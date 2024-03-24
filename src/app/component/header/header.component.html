@@ -1,0 +1,18 @@
+<header id="header2" *ngIf="showHeader">
+        <img routerLink="/app-accueil" src="/assets/ressource/no_bg.png" class="appTitle">
+    <div id="navbar2">
+        <div routerLink="/app-accueil">
+            <img src="/assets/ressource/home.svg" id="_home">
+        </div>
+        <div routerLink="/app-menu">
+            <img src="/assets/ressource/menu.svg" id="_menu">
+        </div>
+        <div routerLink="/app-compte">
+            <img src="/assets/ressource/compte.svg" id="_compte">
+        </div>
+        <div routerLink="/app-bag">
+            <img src="/assets/ressource/panier.svg" id="_bag">
+            <div id="bagTotalCount">{{itemNumber}}</div>
+        </div>
+    </div>
+</header>

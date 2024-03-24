@@ -1,0 +1,22 @@
+<section class="box">
+
+    <ng-container *ngFor="let box of boxInfo">
+        <div class="box-item">
+            <br><br><br><br><br><br>
+            <h2>{{box.nom}}</h2>
+            <p class="price">{{box.prix}} €</p>
+            <img src="/assets/ressource/box/{{box.image}}.png" alt="boxImage" class="boxImage">
+            <h2>Composants</h2>
+            <ul>
+                <li *ngFor="let aliment of box['aliments']">{{aliment.nom}} x{{aliment.quantite}}</li>
+            </ul>
+        </div>
+    </ng-container>
+    <form [formGroup]="addItemForm">
+        <input type="number" formControlName="itemNumber" [max]="maxLength" [min]="minLength">
+        <p *ngIf="maxLength == 0" class="errorMessage">Vous ne pouvez pas commander plus de dix box en même temps</p>
+        <button type="submit" id="selection" (click)="onSubmit()" [disabled]="maxLength == 0">Ajouter</button>
+        <button (click)="add()">+</button>
+        <button (click)="minus()">-</button>
+    </form>
+</section>

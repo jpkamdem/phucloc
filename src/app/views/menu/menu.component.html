@@ -1,0 +1,16 @@
+<section id="menu">
+
+    <div id="allBoxes">
+        <div *ngFor="let box of boxes" [ngClass]="box?.saveurs" class="box" (click)="selectBoxID(box.id);"
+            style="background-image: url('/assets/ressource/box/{{box?.image}}.png');">
+            <p>{{box?.nom}}</p>
+            <div>
+                <p>{{box?.prix}}€</p>
+                <div class="stars">
+                    <img src="assets/ressource/star.svg">
+                    <p>{{box?.stars}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

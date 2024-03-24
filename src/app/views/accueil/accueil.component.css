@@ -1,0 +1,277 @@
+#accueil_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: calc(100% - 60px);
+    color: var(--white);
+    background-color: var(--light-grey);
+}
+
+#accueil_2 #ourMenu_2 {
+    position: relative;
+    margin-top: 3px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    background-image: url(/assets/ressource/boutique_acceuil.png);
+    background-size: contain;
+    background-position: center center;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#accueil_2 #ourMenu_2 h2 {
+    padding: 10px 0px 10px 20px;
+    height: min-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    background-color: rgba(177, 26, 26, 0.765);
+    width: 100%;
+    color: var(--white);
+}
+
+#accueil_2 #pointsContainer_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: calc(90% - 40px);
+    height: 12%;
+    border: 2px solid var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#accueil_2 #pointsContainer_2>h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+#accueil_2 #pointsContainer_2>div {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-color: var(--black);
+    border-radius: 30px;
+}
+
+#accueil_2 #pointsContainer_2>div>p {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-size: 1rem;
+    top: -25px;
+    right: 5px;
+}
+
+#accueil_2 #pointsContainer_2>div>#points_2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    height: 100%;
+    background-color: var(--white);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    padding: 0px 20px;
+}
+
+#accueil_2 #pointsContainer_2>div>#points_2::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: 0px;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: var(--white);
+}
+
+#accueil_2>h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 25px 0px 15px 10%;
+    align-self: flex-start;
+}
+
+#accueil_2 #recommandationsContainer_2 {
+    max-width: 1300px;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    border: 1px solid #222;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation {
+    overflow: hidden;
+    position: relative;
+    min-width: 65%;
+    height: calc(100% - 27px);
+    border: 2px solid var(--white);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation:first-child {
+    margin-left: 5%;
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation:last-child {
+    margin-right: 5%;
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation p {
+    padding-left: 10px;
+    background-color: rgba(177, 26, 26, 0.765);
+    width: calc(100% - 10px);
+    color: var(--white);
+    z-index: 2;
+    font-size: 1.2rem;
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation>div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--white);
+    z-index: 2;
+    width: 100%;
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation>div>#stars_2 {
+    display: flex;
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation>div>#stars_2>img {
+    background-color: rgb(0, 0, 0);
+}
+
+#accueil_2 #recommandationsContainer_2 .recommandation>div>#stars_2>p {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+    #accueil_2 #recommandationsContainer_2 {
+        height: 33%;
+    }
+
+    #accueil_2 #recommandationsContainer_2 .recommandation {
+        min-width: 48%;
+    }
+
+    #accueil_2 {
+        height: calc(100%);
+    }
+
+    #accueil {
+        display: none;
+    }
+
+    #accueil_2 {
+        background-image: url(../../../assets/ressource/fond1.jpeg);
+        background-size: cover;
+        display: flex;
+    }
+
+    #accueil_2 #ourMenu_2 {
+        margin-top: 0%;
+        margin-bottom: 1%;
+        height: 35%;
+        width: 48%;
+    }
+
+    #recommandation_2 {
+        cursor: pointer;
+    }
+
+    #accueil_2 #pointsContainer_2 {
+        width: 300px;
+        height: 20px;
+        position: absolute;
+        bottom: 9px;
+        right: 200px;
+        border-radius: 5px;
+        box-shadow: #ffffff 3px 3px 9px;
+    }
+
+    #accueil_2 #pointsContainer_2>h3 {
+        font-size: 1px;
+    }
+
+    #accueil_2 #ourMenu_2 h2 {
+        font-size: 1.4rem;
+    }
+
+    #accueil_2>h2 {
+        font-size: 1.4rem;
+        margin: 10px 0px 10px 10%;
+        font-weight: bold;
+    }
+
+    #recommandation_2>h2 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-weight: 600;
+        padding: 10px;
+    }
+
+@media screen and (min-width: 1440px) {
+    #accueil_2 #ourMenu_2 {
+        margin-top: 5%;
+        margin-bottom: 1%;
+        height: 39%;
+        width: 48%;
+    }
+
+    #accueil_2 #pointsContainer_2 {
+        width: 360px;
+        height: 37px;
+    }
+
+    #accueil_2 #pointsContainer_2>h3 {
+        font-size: 31px;
+    }
+
+    #recommandation_2>h2 {
+        font-size: 27px;
+    }
+
+    #header2>div>img {
+        width: 100%;
+    }
+
+    #accueil_2 #recommandationsContainer_2 .recommandation {
+        min-width: 25%;
+        background-size: contain;
+
+    }
+}

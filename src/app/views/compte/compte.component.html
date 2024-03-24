@@ -1,0 +1,38 @@
+<section id="ListCommande">
+    <div>
+        <h1>Mon Profil</h1>
+    </div>
+    <br><br><br>
+    <h2>Commandes passées</h2>
+    <button (click)="disconnectUser()" class="disconnect-button">
+        <img alt="icon de déconnexion" src="/assets/ressource/icon_deconnexion.png">
+    </button>
+    <br><br><br>
+    <hr>
+    <br><br><br>
+
+    <div *ngIf="historiqueEmpty">
+        <p>Aucune commandes récentes.</p>
+    </div>
+
+    <div class="command-history" *ngIf="!historiqueEmpty">
+        <ng-container *ngFor="let item of historique; let i = index">
+            <div class="command-details">
+                <div class="price">
+                    <h3>Commande {{item.commandeNumber}}</h3>
+                    <h3 class="prix">{{item.price | currency:'EUR':'symbol':'1.2-2'}}</h3>
+                </div>
+                <ul>
+                    <ng-container *ngFor="let boxes of item.boxes">
+                        <li>{{boxes.nom}} x{{boxes.quantity}}</li>
+                    </ng-container>
+                </ul>
+                <div class="buttons">
+                    <button class="remove-button">En cours de livraison</button>
+                    <button (click)="Annuler(i)" class="annuler">Annuler</button>
+                </div>
+                <hr>
+            </div>
+        </ng-container>
+    </div>
+</section>

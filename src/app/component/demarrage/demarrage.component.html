@@ -1,0 +1,13 @@
+<section id="demarrage">
+    <div id="imgContainer">
+
+        <img [routerLink]="'/app-accueil'" src="/assets/ressource/logo_noir.png" class="appTitle">
+
+    </div>
+
+    <div id="buttonContainer">
+        <a routerLink="/app-connexion" routerLinkActive="active" id="connexion" class="button1">Se connecter</a>
+        <a routerLink="/app-inscription" routerLinkActive="active" id="inscription" class="button2">S'inscrire</a>
+        <a (click)="accessUnknown()" id="non_inscrit">Continuer sans s'inscrire</a>
+    </div>
+</section>

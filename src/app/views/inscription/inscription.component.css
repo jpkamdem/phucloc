@@ -1,0 +1,85 @@
+#connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.appTitle {
+    width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+#connexion h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff0000;
+}
+
+#connexion hr {
+    width: 100%;
+    margin: 1rem 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+#connexion form {
+    width: 100%;
+}
+
+#connexion form div {
+    margin-bottom: 1.5rem;
+}
+
+#connexion form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#connexion form input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.errorMessage {
+    color: #ff0000;
+    font-size: 0.8rem;
+}
+
+#inscriptionButton {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#inscriptionButton:hover {
+    background-color: #cc0000;
+}
+
+#connexionButton {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+#connexionButton:hover {
+    background-color: #cc0000;
+}
