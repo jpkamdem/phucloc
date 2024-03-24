@@ -1,0 +1,15 @@
+.rgpd-container {
+    position: relative;
+    margin-left: 20px;
+}
+.rgpd-container h1 {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;;
+}
+.rgpd-lorem {
+    position: relative;
+    color: #fff;
+    margin-left: 20px;
+}

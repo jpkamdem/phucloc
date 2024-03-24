@@ -11,6 +11,7 @@ import { AccueilComponent } from './views/accueil/accueil.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { CompteComponent } from './views/compte/compte.component';
 import { PanierComponent } from './views/panier/panier.component';
+import { InfosComponent } from './views/infos/infos.component';
 
 const routes: Routes = [
   { path: "app-header", component: HeaderComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: "app-connexion", component: ConnexionComponent },
   { path: "app-inscription", component: InscriptionComponent },
   { path: "app-bag", component: PanierComponent },
+  { path: "app-infos", component: InfosComponent },
   { path: "", redirectTo: "app-demarrage", pathMatch: 'full'},
   { path: "**", redirectTo: "app-connexion" }
 ];

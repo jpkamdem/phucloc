@@ -14,6 +14,7 @@ import { PanierComponent } from './views/panier/panier.component';
 import { ConnexionComponent } from './views/connexion/connexion.component';
 import { DemarrageComponent } from './component/demarrage/demarrage.component';
 import { BoxComponent } from './component/box/box.component';
+import { InfosComponent } from './views/infos/infos.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { BoxComponent } from './component/box/box.component';
     BoxComponent,
     PanierComponent,
     InscriptionComponent,
+    InfosComponent,
   ],
   imports: [
     BrowserModule,

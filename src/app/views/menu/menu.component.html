@@ -1,9 +1,8 @@
 <section id="menu">
-
     <div id="allBoxes">
         <div *ngFor="let box of boxes" [ngClass]="box?.saveurs" class="box" (click)="selectBoxID(box.id);"
             style="background-image: url('/assets/ressource/box/{{box?.image}}.png');">
-            <p>{{box?.nom}}</p>
+            <p style="color: red; font-size: 1.5em; font-weight: bold;">{{box?.nom}}</p>
             <div>
                 <p>{{box?.prix}}€</p>
                 <div class="stars">

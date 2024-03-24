@@ -1,8 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { HeaderService } from '../../services/header.service';
-import { BoxService } from '../../services/box.service';
 import { PanierService } from '../../services/panier.service';
+import { InfosComponent } from '../../views/infos/infos.component';
 
 @Component({
   selector: 'app-header',

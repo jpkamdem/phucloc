@@ -2,21 +2,30 @@
 
     <ng-container *ngFor="let box of boxInfo">
         <div class="box-item">
-            <br><br><br><br><br><br>
-            <h2>{{box.nom}}</h2>
+            <h2 style="color: var(--red); font-weight: 900;padding: .15em; margin: .25em 0; display: inline-block; background: #fff;">{{box.nom}}</h2>
             <p class="price">{{box.prix}} €</p>
-            <img src="/assets/ressource/box/{{box.image}}.png" alt="boxImage" class="boxImage">
-            <h2>Composants</h2>
+            <img src="/assets/ressource/box/{{box.image}}.png" alt="boxImage" class="boxImage" style="height: 350px">
+            <h1 style="font-size: 2.5em; width: min-content; border-bottom: 2px solid lightcoral; margin-bottom: .5em">Ingrédients</h1>
             <ul>
-                <li *ngFor="let aliment of box['aliments']">{{aliment.nom}} x{{aliment.quantite}}</li>
+                <li style="color: #fff; padding: .3em 0;"  *ngFor="let aliment of box['aliments']">{{aliment.nom}} x{{aliment.quantite}}</li>
             </ul>
         </div>
     </ng-container>
     <form [formGroup]="addItemForm">
-        <input type="number" formControlName="itemNumber" [max]="maxLength" [min]="minLength">
-        <p *ngIf="maxLength == 0" class="errorMessage">Vous ne pouvez pas commander plus de dix box en même temps</p>
-        <button type="submit" id="selection" (click)="onSubmit()" [disabled]="maxLength == 0">Ajouter</button>
-        <button (click)="add()">+</button>
-        <button (click)="minus()">-</button>
+        <section class="grid-garden">
+            <div class="div1">
+                <input type="number" formControlName="itemNumber" [max]="maxLength" [min]="minLength">
+                <p *ngIf="maxLength == 0" class="errorMessage">Vous ne pouvez pas commander plus de dix box en même temps</p>
+            </div>
+            <div class="div2">
+                <button (click)="add()">+</button>
+            </div>
+            <div class="div3">
+                <button (click)="minus()">-</button>
+            </div>
+            <div class="div4">
+                <button type="submit" id="selection" (click)="onSubmit()" [disabled]="maxLength == 0">Valider</button>
+            </div>
+        </section>
     </form>
 </section>

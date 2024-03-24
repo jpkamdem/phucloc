@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 90px;
-    background-color: var(--white);
+    background-color: #222;
     color: var(--black);
 }
 
@@ -70,15 +70,14 @@
 }
 
 #menu>#allBoxes {
-    margin-top: 25px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    overflow-y: scroll;
-    background: #888686;
-    padding: 20px 10px 150px 10px;
-    z-index: 2;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 2.5em 4em; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."
+      ". . ."; 
 }
 
 #menu>#allBoxes>.box {
@@ -91,7 +90,7 @@
     position: relative;
     background-size: cover;
     background-position: center center;
-    border: 1px solid var(--white);
+    border: 1px solid #fff;
 }
 
 #menu>#allBoxes>.box>p {
@@ -100,8 +99,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1.2rem;
-    color: var(--white);
-    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #menu>#allBoxes>.box>.fav {
