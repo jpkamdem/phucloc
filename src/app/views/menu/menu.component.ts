@@ -30,6 +30,10 @@ export class MenuComponent implements OnInit {
     this.router.navigate([`/app-box`]);
   }
 
-  loadBoxes() { }
+  loadBoxes() { 
+    this.http.get("https://jipekfll.alwaysdata.net/traitement/read.php").subscribe((boxes: any ) =>{
+      this.boxes = boxes;
+    })
+  }
 
 }

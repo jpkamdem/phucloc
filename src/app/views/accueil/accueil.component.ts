@@ -33,5 +33,9 @@ export class AccueilComponent implements OnInit {
     this.nav.changeActive(value);
   }
 
-  loadRecommandation() { }
+  loadRecommandation() {
+    this.http.get("https://jipekfll.alwaysdata.net/traitement/read.php").subscribe((recommandations: any) => {
+      this.recommandations = recommandations;
+    })
+  }
 }
