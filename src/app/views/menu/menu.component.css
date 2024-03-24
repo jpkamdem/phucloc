@@ -76,22 +76,22 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     overflow-y: scroll;
+    background: #888686;
     padding: 20px 10px 150px 10px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--black);
     z-index: 2;
 }
 
 #menu>#allBoxes>.box {
     overflow: hidden;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 3em;
     position: relative;
     background-size: cover;
     background-position: center center;
-    border: 1px solid var(--red);
+    border: 1px solid var(--white);
 }
 
 #menu>#allBoxes>.box>p {
@@ -113,10 +113,7 @@
 
 #menu>#allBoxes>.box>div {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: .5rem 1rem;
 }
 
 #menu>#allBoxes>.box>div .stars {
@@ -126,7 +123,7 @@
 
 .box {
     overflow: hidden;
-    border: 1px solid var(--red);
+    border: 3px solid var(--red);
     background-size: cover;
     background-position: center center;
     border-radius: 20px;
