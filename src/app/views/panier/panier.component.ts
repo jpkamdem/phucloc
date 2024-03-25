@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 import { PanierService } from '../../services/panier.service';
 
 @Component({
-  selector: 'app-bag',
+  selector: 'cart',
   templateUrl: './panier.component.html',
   styleUrl: './panier.component.css'
 })

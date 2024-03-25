@@ -1,12 +1,12 @@
 <?php
 Class Box {
-    private $conn;
-    private $data_base;
     public $id;
+    private $conn;
     public $nom;
-    public $piece;
     public $prix;
+    public $piece;
     public $image;
+    private $data_base;
     public $fav;
 
     function __construct($db) {

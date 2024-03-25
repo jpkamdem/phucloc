@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: "app-demarrage", component: DemarrageComponent },
   { path: "app-connexion", component: ConnexionComponent },
   { path: "app-inscription", component: InscriptionComponent },
-  { path: "app-bag", component: PanierComponent },
+  { path: "app-cart", component: PanierComponent },
   { path: "app-infos", component: InfosComponent },
   { path: "", redirectTo: "app-demarrage", pathMatch: 'full'},
   { path: "**", redirectTo: "app-connexion" }
