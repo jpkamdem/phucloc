@@ -12,7 +12,7 @@ import { PanierService } from '../../services/panier.service';
 })
 export class AccueilComponent implements OnInit {
   recommandations : any[] = [];
-  constructor(private http : HttpClient, private box : BoxService, private nav : NavService, private router : Router, private bag : PanierService) {
+  constructor(private http : HttpClient, private box : BoxService, private nav : NavService, private router : Router, private cart : PanierService) {
     this.loadRecommandation();
   }
 
@@ -22,7 +22,7 @@ export class AccueilComponent implements OnInit {
       this.router.navigate([`/app-connexion`]);
     }
     this.nav.changeActive("home");
-    this.bag.checkNewBag();
+    this.cart.checkNewBag();
   }
 
   selectBoxID(id : number) {
@@ -34,7 +34,7 @@ export class AccueilComponent implements OnInit {
   }
 
   loadRecommandation() {
-    this.http.get("https://jipekfll.alwaysdata.net/traitement/read.php").subscribe((recommandations: any) => {
+    this.http.get("https://jipekfll.alwaysdata.net/operations/get.php").subscribe((recommandations: any) => {
       this.recommandations = recommandations;
     })
   }

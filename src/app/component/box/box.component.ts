@@ -137,7 +137,7 @@ export class BoxComponent implements OnInit, OnDestroy{
   }
   
   loadBox() {
-    this.http.get("https://jipekfll.alwaysdata.net/traitement/read.php?id="+this.boxID).subscribe((boxes: any ) => {
+    this.http.get("https://jipekfll.alwaysdata.net/operations/get.php?id="+this.boxID).subscribe((boxes: any ) => {
       this.boxInfo = boxes;
     })
   }

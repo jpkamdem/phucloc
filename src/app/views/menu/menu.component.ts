@@ -31,7 +31,7 @@ export class MenuComponent implements OnInit {
   }
 
   loadBoxes() { 
-    this.http.get("https://jipekfll.alwaysdata.net/traitement/read.php").subscribe((boxes: any ) =>{
+    this.http.get("https://jipekfll.alwaysdata.net/operations/get.php").subscribe((boxes: any ) =>{
       this.boxes = boxes;
     })
   }

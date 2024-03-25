@@ -7,7 +7,6 @@ Class Box {
     public $piece;
     public $prix;
     public $image;
-
     public $fav;
 
     function __construct($db) {
@@ -15,8 +14,8 @@ Class Box {
     }
 
     function getBox() {
-        $sqlQuery = "SELECT * FROM box WHERE id=:id";
-        $stmt = $this->conn->prepare($sqlQuery);
+        $query = "SELECT * FROM box WHERE id=:id";
+        $stmt = $this->conn->prepare($query);
         $options = [
             "id" => $this->id
         ];
@@ -28,18 +27,18 @@ Class Box {
     }
 
     function getAllBoxes() {
-        $sqlQuery = "SELECT * FROM box";
-        $stmt = $this->conn->prepare($sqlQuery);
+        $query = ("SELECT * FROM box");
+        $stmt = $this->conn->prepare($query);
         if($stmt->execute()) {
             return $stmt;
         } else {
-            return "Erreur base de donnée";
+            return "Erreur lors de la requête SELECT ('SELECT * FROM box')";
         }
     }
 
     function getAliments() {
-        $sqlQuery = "SELECT aliments.nom, quantité FROM boxaliments INNER JOIN aliments ON boxaliments.idAliment = aliments.id WHERE idBox=:id;";
-        $stmt = $this->conn->prepare($sqlQuery);
+        $query = ("SELECT aliments.nom, quantité FROM boxaliments INNER JOIN aliments ON boxaliments.idAliment = aliments.id WHERE idBox=:id");
+        $stmt = $this->conn->prepare($query);
         $options = [
             "id" => $this->id
         ];
@@ -49,20 +48,20 @@ Class Box {
 
             $allAliments = [];
             $oneAliment = [];
-            foreach($results as $result) {
-                $oneAliment["nom"] = $result["nom"];
-                $oneAliment["quantite"] = $result ["quantité"];
+            foreach($results as $res) {
+                $oneAliment["nom"] = $res["nom"];
+                $oneAliment["quantite"] = $res ["quantité"];
                 array_push($allAliments, $oneAliment);
             }
             return $allAliments;
         } else {
-            return "Erreur base de donnée";
+            return "Erreur lors de la requête SELECT ('SELECT aliments.nom, quantité FROM boxaliments INNER JOIN aliments ON boxaliments.idAliment = aliments.id WHERE idBox=:id')";
         }
     }
 
     function getSaveur() {
-        $sqlQuery = "SELECT saveurs.nom FROM boxsaveurs INNER JOIN saveurs ON boxsaveurs.idSaveur = saveurs.id WHERE idBox=:id;";
-        $stmt = $this->conn->prepare($sqlQuery);
+        $query = "SELECT saveurs.nom FROM boxsaveurs INNER JOIN saveurs ON boxsaveurs.idSaveur = saveurs.id WHERE idBox=:id;";
+        $stmt = $this->conn->prepare($query);
         $options = [
             "id" => $this->id
         ];
@@ -71,12 +70,12 @@ Class Box {
             $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             $allSaveur = [];
-            foreach($results as $result) {
-                $allSaveur[] = $result["nom"];
+            foreach($results as $res) {
+                $allSaveur[] = $res["nom"];
             }
             return $allSaveur;
         } else {
-            return "Erreur base de donnée";
+            return "Erreur lors de la requête SELECT ('SELECT saveurs.nom FROM boxsaveurs INNER JOIN saveurs ON boxsaveurs.idSaveur = saveurs.id WHERE idBox=:id')";
         }
     }
 }
