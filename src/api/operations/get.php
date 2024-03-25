@@ -12,9 +12,8 @@ $database = new Database();
 $db = $database->getConnection();
 
 $box = new Box($db);
-
-if(!isset($_GET["id"])) {
-
+$ifExistId = isset($_GET["id"]);
+if(!ifExistId) {
     $stmt = $box->getAllBoxes();
     $itemCount = $stmt->rowCount();
     if($itemCount > 0){
